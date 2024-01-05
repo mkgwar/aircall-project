@@ -1,4 +1,4 @@
-const API_ENDPOINT = "https://cerulean-marlin-wig.cyclic.app/";
+const API_ENDPOINT = "https://cerulean-marlin-wig.cyclic.app";
 const ACTIVITY_FEED = "Activity Feed";
 const ARCHIVE = "Archive";
 const UNARCHIVE = "Unarchive";
