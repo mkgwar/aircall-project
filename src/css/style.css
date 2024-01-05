@@ -1,0 +1,250 @@
+/* call-container  --start */
+
+.call-container {
+  padding: 0.5rem 1rem;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.call-detail {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.caller-number {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+.call-type-direction {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.call-type {
+  padding: 0.25rem;
+  color: white;
+  border-radius: 0.25rem;
+}
+
+.call-type.missed {
+  background-color: rgb(209, 22, 22);
+}
+
+.call-type.answered {
+  background-color: rgb(8, 117, 8);
+}
+.call-type.voicemail {
+  background-color: rgb(68, 68, 236);
+}
+
+.call-menu {
+  cursor: pointer;
+  position: relative;
+}
+
+.dots-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.dot {
+  border-radius: 100%;
+  height: 0.2rem;
+  width: 0.2rem;
+  background-color: #333333;
+}
+
+.context-menu {
+  background-color: white;
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  border: 0.1px solid #333333;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  z-index: 500;
+  display: none;
+}
+
+.context-menu.visible {
+  display: block;
+}
+
+.context-menu ul {
+  list-style: none;
+  text-align: center;
+}
+
+.context-menu li {
+  padding: 0.5rem;
+}
+
+.context-menu li:hover {
+  background-color: #333333;
+  color: white;
+}
+
+/* call-container  --end */
+
+/* feed  --start */
+
+.feed {
+  padding: 1rem;
+  background-color: rgba(220, 220, 220, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  transition: 0.5s;
+}
+
+.top-menu-option {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.7rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.top-menu-option:hover {
+  background-color: rgb(220, 220, 220);
+}
+
+.call-list {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  transition: 0.5s;
+}
+
+.top-section.active {
+  transform: translateX(-150%);
+}
+
+.call-list.active {
+  transform: translateX(-150%);
+}
+
+.page-heading {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* feed  --end */
+
+/* Bottom Tabs --start */
+
+.bottom-tabs {
+  display: flex;
+}
+
+.tab {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #333333;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tab.selected {
+  background-color: #333333;
+  color: white;
+}
+
+/* Bottom Tabs --end */
+
+/* Detail section --start */
+
+.detail-section {
+  position: absolute;
+  padding: 2rem;
+  height: 100%;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: 0.5s;
+}
+
+.detail-section.active {
+  transform: translateX(0);
+}
+
+.detail-top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.detail-section ul {
+  list-style: none;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-label {
+  font-weight: bold;
+  color: #333333;
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+}
+
+.cross {
+  position: relative;
+  cursor: pointer;
+}
+
+.cross-line {
+  height: 20px;
+  width: 2px;
+  background-color: #333333;
+  position: absolute;
+  top: -10px;
+}
+
+.cross-line.first {
+  transform: rotateZ(45deg);
+}
+
+.cross-line.second {
+  transform: rotateZ(-45deg);
+}
+
+/* Detail section --end */
